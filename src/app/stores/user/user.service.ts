@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { HttpServerService } from '../../http-server/server.service';
-import { MainService } from '../main.service';
+import { HttpServerService } from '../../services/http-server/server.service';
+import { StoreService } from '../store.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService extends MainService {
+export class UserService extends StoreService {
   user: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   constructor(private _httpServerService: HttpServerService) {

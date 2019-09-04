@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { Error404Page } from './error-404.component';
 import { routes } from './error-404.routing';
 import { DirectivesModule } from 'src/app/shared/directives/directives.module';
-import { ComponentsModule } from 'src/app/shared/components/components.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   declarations: [Error404Page],

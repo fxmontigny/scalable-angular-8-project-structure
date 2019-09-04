@@ -64,27 +64,27 @@ export class HttpServerService {
   }
 
   /* HTTPs request */
-  get(url): Promise<any> {
+  get(url, options = {}): Promise<any> {
     return this._http
-      .get(this.getUrl(url), this.getOptions())
+      .get(this.getUrl(url), { ...this.getOptions(), ...options })
       .catch(this.handleError);
   }
 
-  post(url, params = {}): Promise<any> {
+  post(url, params = {}, options = {}): Promise<any> {
     return this._http
-      .post(this.getUrl(url), params, this.getOptions())
+      .post(this.getUrl(url), params, { ...this.getOptions(), ...options })
       .catch(this.handleError);
   }
 
-  put(url, params = {}): Promise<any> {
+  put(url, params = {}, options = {}): Promise<any> {
     return this._http
-      .put(this.getUrl(url), params, this.getOptions())
+      .put(this.getUrl(url), params, { ...this.getOptions(), ...options })
       .catch(this.handleError);
   }
 
-  delete(url): Promise<any> {
+  delete(url, options = {}): Promise<any> {
     return this._http
-      .delete(this.getUrl(url), this.getOptions())
+      .delete(this.getUrl(url), { ...this.getOptions(), ...options })
       .catch(this.handleError);
   }
 

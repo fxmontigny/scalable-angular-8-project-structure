@@ -13,7 +13,7 @@ export class HttpService {
   constructor(private _http: HttpClient) {}
 
   isMock(options) {
-    return true; // TODO ici
+    return environment.mock || options.mock;
   }
 
   mockChecking(url, type, options) {
@@ -34,7 +34,6 @@ export class HttpService {
 
   post(url, params = {}, options = {}): Promise<any> {
     const mock = this.mockChecking(url, 'post', options);
-    console.log('mock ', mock);
     if (mock) {
       return mock;
     } else {

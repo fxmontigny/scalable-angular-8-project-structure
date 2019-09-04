@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { PipesModule } from '../pipes/pipes.module';
-import { DirectivesModule } from '../directives/directives.module';
+import { PipesModule } from '../shared/pipes/pipes.module';
+import { DirectivesModule } from '../shared/directives/directives.module';
 
 const list = [];
 

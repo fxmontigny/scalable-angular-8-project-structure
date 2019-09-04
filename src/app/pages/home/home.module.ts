@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.component';
 import { routes } from './home.routing';
 import { DirectivesModule } from 'src/app/shared/directives/directives.module';
-import { ComponentsModule } from 'src/app/shared/components/components.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   declarations: [HomePage],

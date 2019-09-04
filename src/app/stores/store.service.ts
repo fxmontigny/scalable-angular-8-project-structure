@@ -1,4 +1,4 @@
-export class MainService {
+export class StoreService {
   error(err) {
     throw err;
   }
